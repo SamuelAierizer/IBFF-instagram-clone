@@ -1,0 +1,14 @@
+# Default ignored files
+/workspace.xml
+/compiler.xml
+/misc.xml
+/vcs.xml
+*.iml
+/target/
+/.settings/
+/.classpath
+/.project
+pom.xml
+/.idea/
+/out/
+/*.iml

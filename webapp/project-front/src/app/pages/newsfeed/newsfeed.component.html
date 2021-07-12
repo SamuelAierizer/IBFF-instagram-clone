@@ -1,0 +1,27 @@
+<div class="container">
+	<app-navigation></app-navigation>
+</div>
+
+<main role="main" class="container pt-5">
+
+	<div class="starter-template p-5 text-center">
+		<h2>Welcome to Newsfeed</h2>
+		<p class="lead">This is the newsfeed where you can see the posts of the people you follow.</p>
+	</div>
+
+	<div *ngIf="!currentUser">
+		<div class="d-flex flex-column justify-content-center">
+			<h1 class="text-center p-5">To fully use the website, you should consider logging in</h1>
+		</div>
+	</div>
+
+	<div *ngIf="currentUser">
+		<h3 class="text-center">Posts of followed people</h3>
+		<div class="row pt-5 justify-content-center" *ngFor="let curentPost of posts">
+			<div class="col-6 pb-4">
+				<app-post [post]="curentPost"></app-post>
+			</div>
+		</div>
+	</div>
+
+</main>

@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-md fixed-top" style="color: #171a1d; background-color: #1b1e21;">
+    <a class="navbar-brand text-light" href="#">IBFF</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link text-light" href="/">Newsfeed <span class="sr-only">(current)</span></a>
+            </li>
+            <div *ngIf="!currentUser">
+                <li class="nav-item">
+                    <a href="/login" class="nav-link text-info">Login</a>
+                </li>
+            </div>
+            <div *ngIf="currentUser">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/profile/{{userUsername}}">Profile {{ userUsername }}</a>
+                </li>
+            </div>
+            <div *ngIf="currentUser && currentUser.role == Role.Admin">
+                <li class="nav-item">
+                    <a class="nav-link text-info" href="/admin">Admin</a>
+                </li>
+            </div>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 pl-1" name="form" #f="ngForm" (ngSubmit)="f.form.valid && search()" novalidate>
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" name="username" [(ngModel)]="form.username" required #username="ngModel">
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div *ngIf="currentUser" class="ml-2">
+            <a type="submit" class="btn btn-outline-danger" (click)="logout()">Logout</a>
+        </div>
+        
+    </div>
+</nav>

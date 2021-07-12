@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="3947.3555925498135" y="318.0">com.ps.project.utils.exporter.FileExporter</node>
+    <node x="2838.2833333333338" y="806.0">com.ps.project.controller.AdminController</node>
+    <node x="688.1428196282886" y="0.0">com.ps.project.vo.request.SignupRequest</node>
+    <node x="2406.2833333333338" y="806.0">com.ps.project.exceptions.ControllerExceptionHandler</node>
+    <node x="382.08333333333326" y="437.0">com.ps.project.vo.response.JwtResponse</node>
+    <node x="1353.0856446331454" y="806.0">com.ps.project.service.implementation.ProfileServiceImpl</node>
+    <node x="1571.8094862949556" y="806.0">com.ps.project.service.implementation.UserServiceImpl</node>
+    <node x="3567.3555925498135" y="437.0">com.ps.project.vo.response.CommentResponse</node>
+    <node x="2662.2833333333338" y="806.0">com.ps.project.service.implementation.PostServiceImpl</node>
+    <node x="3755.3555925498135" y="437.0">com.ps.project.repository.CommentRepository</node>
+    <node x="446.0" y="959.0">com.ps.project.web.WebConfig</node>
+    <node x="62.978336420526375" y="885.0">com.ps.project.WebSecurityConfig</node>
+    <node x="1137.2606446331454" y="318.0">com.ps.project.model.Admin</node>
+    <node x="4462.605592549814" y="437.0">com.ps.project.vo.request.PostCreateRequest</node>
+    <node x="1650.2833333333335" y="437.0">com.ps.project.vo.request.FollowRequest</node>
+    <node x="2821.4106842116234" y="437.0">com.ps.project.vo.request.UserEditRequest</node>
+    <node x="4158.605592549814" y="437.0">com.ps.project.vo.response.PostResponse</node>
+    <node x="873.30860087829" y="119.0">com.ps.project.vo.UserDetailsDTO</node>
+    <node x="526.0833333333333" y="806.0">com.ps.project.service.implementation.AdminServiceImpl</node>
+    <node x="818.4583333333333" y="806.0">com.ps.project.controller.UserController</node>
+    <node x="2997.4106842116234" y="437.0">com.ps.project.vo.response.MessageResponse</node>
+    <node x="3173.4106842116234" y="437.0">com.ps.project.repository.PostRepository</node>
+    <node x="2061.2833333333338" y="437.0">com.ps.project.vo.request.ProfileEditRequest</node>
+    <node x="903.4583333333333" y="437.0">com.ps.project.vo.response.ProfileDataResponse</node>
+    <node x="162.0" y="806.0">com.ps.project.web.jwt.JwtFilter</node>
+    <node x="2259.2833333333338" y="437.0">com.ps.project.repository.UserRepository</node>
+    <node x="295.0" y="806.0">com.ps.project.service.implementation.SecurityServiceImpl</node>
+    <node x="4113.408333333334" y="806.0">com.ps.project.controller.PostController</node>
+    <node x="245.0" y="959.0">com.ps.project.web.WebSocketConfig</node>
+    <node x="0.0" y="959.0">com.ps.project.MainWebAppInitializer</node>
+    <node x="207.75" y="437.0">com.ps.project.web.jwt.JwtProvider</node>
+    <node x="3602.5333333333338" y="806.0">com.ps.project.service.implementation.CommentServiceImpl</node>
+    <node x="1472.9692455114355" y="119.0">com.ps.project.model.User</node>
+    <node x="1812.2833333333335" y="437.0">com.ps.project.vo.response.FollowNumbersDataResponse</node>
+    <node x="0.0" y="806.0">com.ps.project.web.jwt.JwtEntryPoint</node>
+    <node x="1308.5856446331454" y="437.0">com.ps.project.repository.ProfileRepository</node>
+    <node x="530.0833333333333" y="437.0">com.ps.project.repository.AdminRepository</node>
+    <node x="747.4583333333333" y="437.0">com.ps.project.vo.request.LoginRequest</node>
+    <node x="3397.3555925498135" y="437.0">com.ps.project.vo.request.CommentRequest</node>
+    <node x="4313.605592549814" y="437.0">com.ps.project.vo.request.LikeRequest</node>
+    <node x="1142.4583333333335" y="806.0">com.ps.project.ProjectApplication</node>
+    <node x="1493.6583333333335" y="318.0">com.ps.project.model.Profile</node>
+    <node x="2454.6481446331454" y="437.0">com.ps.project.exceptions.ApiExceptionResponse</node>
+    <node x="1931.5333333333335" y="806.0">com.ps.project.controller.ProfileController</node>
+    <node x="3695.3555925498135" y="318.0">com.ps.project.model.Comment</node>
+    <node x="3073.3190476190475" y="806.0">com.ps.project.controller.CommentController</node>
+    <node x="3325.475495511436" y="0.0">com.ps.project.model.Post</node>
+    <node x="3970.605592549814" y="437.0">com.ps.project.utils.exporter.XMLFileExporter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.ps.project.model.Comment" target="com.ps.project.model.Post">
+      <point x="24.75" y="-14.5" />
+      <point x="3769.6055925498135" y="89.0" />
+      <point x="3370.975495511436" y="89.0" />
+      <point x="7.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.repository.CommentRepository" target="com.ps.project.model.Comment">
+      <point x="-42.75" y="-14.5" />
+      <point x="3798.1055925498135" y="417.0" />
+      <point x="3777.8555925498135" y="417.0" />
+      <point x="33.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.UserController" target="com.ps.project.vo.response.ProfileDataResponse">
+      <point x="27.090909090909122" y="-14.5" />
+      <point x="920.0492424242425" y="656.0" />
+      <point x="1042.2083333333333" y="656.0" />
+      <point x="46.25" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.ProjectApplication" target="com.ps.project.model.Admin">
+      <point x="-44.5" y="-14.5" />
+      <point x="1186.9583333333335" y="666.0" />
+      <point x="1181.9583333333333" y="666.0" />
+      <point x="1181.9583333333333" y="367.0" />
+      <point x="1179.2606446331454" y="367.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.PostController" target="com.ps.project.vo.response.MessageResponse">
+      <point x="-37.25" y="-14.5" />
+      <point x="4150.658333333334" y="506.0" />
+      <point x="3142.2678270687666" y="506.0" />
+      <point x="66.85714285714312" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.AdminController" target="com.ps.project.vo.request.UserEditRequest">
+      <point x="19.5" y="-14.5" />
+      <point x="2935.7833333333338" y="626.0" />
+      <point x="2899.4106842116234" y="626.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.utils.exporter.XMLFileExporter">
+      <point x="82.15384615384619" y="-14.5" />
+      <point x="3773.6871794871795" y="786.0" />
+      <point x="4048.605592549814" y="786.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.PostController" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="-67.05000000000018" y="-14.5" />
+      <point x="4120.858333333334" y="526.0" />
+      <point x="2637.9208719058724" y="526.0" />
+      <point x="87.27272727272702" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.UserServiceImpl" target="com.ps.project.model.Profile">
+      <point x="-39.0" y="-14.5" />
+      <point x="1610.8094862949556" y="626.0" />
+      <point x="1554.1583333333335" y="626.0" />
+      <point x="11.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.ProfileController" target="com.ps.project.vo.request.ProfileEditRequest">
+      <point x="32.0625" y="-14.5" />
+      <point x="2049.0958333333338" y="646.0" />
+      <point x="2150.2833333333338" y="646.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.vo.response.CommentResponse">
+      <point x="0.0" y="-14.5" />
+      <point x="3691.5333333333338" y="786.0" />
+      <point x="3684.3555925498135" y="786.0" />
+      <point x="39.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.repository.UserRepository" target="com.ps.project.model.User">
+      <point x="0.0" y="-14.5" />
+      <point x="2333.7833333333338" y="218.0" />
+      <point x="1532.323412178102" y="218.0" />
+      <point x="20.854166666666742" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.model.Profile" target="com.ps.project.model.User">
+      <point x="0.0" y="-14.5" />
+      <point x="1543.1583333333335" y="278.0" />
+      <point x="1513.073412178102" y="278.0" />
+      <point x="1.6041666666667425" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.web.jwt.JwtFilter" target="com.ps.project.web.jwt.JwtProvider">
+      <point x="28.25" y="-14.5" />
+      <point x="246.75" y="786.0" />
+      <point x="239.75" y="786.0" />
+      <point x="-32.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.PostController" target="com.ps.project.vo.request.LikeRequest">
+      <point x="37.25" y="-14.5" />
+      <point x="4225.158333333334" y="766.0" />
+      <point x="4377.605592549814" y="766.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.PostController" target="com.ps.project.model.Post">
+      <point x="52.149999999999636" y="-14.5" />
+      <point x="4240.058333333333" y="776.0" />
+      <point x="4452.105592549814" y="776.0" />
+      <point x="4452.105592549814" y="49.0" />
+      <point x="3398.975495511436" y="49.0" />
+      <point x="35.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.AdminController" target="com.ps.project.model.User">
+      <point x="-19.5" y="-14.5" />
+      <point x="2896.7833333333338" y="636.0" />
+      <point x="2810.9106842116234" y="636.0" />
+      <point x="2810.9106842116234" y="198.0" />
+      <point x="1538.7400788447685" y="198.0" />
+      <point x="27.270833333333258" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.ProfileController" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="53.4375" y="-14.5" />
+      <point x="2070.4708333333338" y="716.0" />
+      <point x="2533.1935991786" y="716.0" />
+      <point x="-17.454545454545496" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.CommentController" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="-68.40000000000009" y="-14.5" />
+      <point x="3090.419047619048" y="616.0" />
+      <point x="2603.011780996782" y="616.0" />
+      <point x="52.36363636363649" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.PostServiceImpl" target="com.ps.project.model.Profile">
+      <point x="-13.0" y="-14.5" />
+      <point x="2727.2833333333338" y="726.0" />
+      <point x="2734.7833333333338" y="726.0" />
+      <point x="2734.7833333333338" y="397.0" />
+      <point x="1587.1583333333335" y="397.0" />
+      <point x="44.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.WebSecurityConfig" target="com.ps.project.web.jwt.JwtFilter">
+      <point x="42.75" y="-14.5" />
+      <point x="191.22833642052638" y="860.0" />
+      <point x="218.5" y="860.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.UserServiceImpl" target="com.ps.project.repository.UserRepository">
+      <point x="39.0" y="-14.5" />
+      <point x="1688.8094862949556" y="666.0" />
+      <point x="2315.1583333333338" y="666.0" />
+      <point x="-18.625" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.repository.CommentRepository">
+      <point x="41.07692307692287" y="-14.5" />
+      <point x="3732.6102564102566" y="756.0" />
+      <point x="3840.8555925498135" y="756.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.ProfileServiceImpl" target="com.ps.project.model.User">
+      <point x="-66.75" y="-14.5" />
+      <point x="1375.3356446331454" y="636.0" />
+      <point x="1275.7606446331454" y="636.0" />
+      <point x="1275.7606446331454" y="278.0" />
+      <point x="1500.2400788447685" y="278.0" />
+      <point x="-11.229166666666742" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.model.User" target="com.ps.project.model.Post">
+      <point x="-9.625" y="-14.5" />
+      <point x="1501.8442455114355" y="59.0" />
+      <point x="3328.975495511436" y="59.0" />
+      <point x="-35.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.repository.UserRepository">
+      <point x="-82.15384615384619" y="-14.5" />
+      <point x="3609.379487179487" y="586.0" />
+      <point x="2389.6583333333338" y="586.0" />
+      <point x="55.875" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.ProfileServiceImpl" target="com.ps.project.model.Profile">
+      <point x="22.25" y="-14.5" />
+      <point x="1464.3356446331454" y="646.0" />
+      <point x="1490.0856446331454" y="646.0" />
+      <point x="1490.0856446331454" y="417.0" />
+      <point x="1543.1583333333335" y="417.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.exceptions.ControllerExceptionHandler" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="0.0" y="-14.5" />
+      <point x="2524.2833333333338" y="726.0" />
+      <point x="2550.6481446331454" y="726.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.model.Admin" target="com.ps.project.vo.UserDetailsDTO">
+      <point x="-21.0" y="-14.5" />
+      <point x="1158.2606446331454" y="168.0" />
+      <point x="1009.8919342116233" y="168.0" />
+      <point x="62.08333333333326" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.vo.response.ProfileDataResponse" target="com.ps.project.model.User">
+      <point x="-46.25" y="-14.5" />
+      <point x="949.7083333333333" y="228.0" />
+      <point x="1484.198412178102" y="228.0" />
+      <point x="-27.270833333333258" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.PostServiceImpl" target="com.ps.project.repository.UserRepository">
+      <point x="-65.0" y="-14.5" />
+      <point x="2675.2833333333338" y="666.0" />
+      <point x="2352.4083333333338" y="666.0" />
+      <point x="18.625" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.repository.PostRepository" target="com.ps.project.model.Post">
+      <point x="0.0" y="-14.5" />
+      <point x="3247.9106842116234" y="99.0" />
+      <point x="3356.975495511436" y="99.0" />
+      <point x="-7.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.SecurityServiceImpl" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="77.08333333333331" y="-14.5" />
+      <point x="464.58333333333326" y="676.0" />
+      <point x="2463.375417360418" y="676.0" />
+      <point x="-87.27272727272748" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.UserServiceImpl" target="com.ps.project.repository.ProfileRepository">
+      <point x="-65.0" y="-14.5" />
+      <point x="1584.8094862949556" y="636.0" />
+      <point x="1451.0856446331454" y="636.0" />
+      <point x="57.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.UserController" target="com.ps.project.vo.response.JwtResponse">
+      <point x="-67.72727272727275" y="-14.5" />
+      <point x="825.2310606060605" y="666.0" />
+      <point x="488.75" y="666.0" />
+      <point x="42.66666666666663" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.model.User" target="com.ps.project.vo.request.SignupRequest">
+      <point x="-28.875" y="-14.5" />
+      <point x="1482.5942455114355" y="99.0" />
+      <point x="794.6428196282886" y="99.0" />
+      <point x="35.5" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.ProjectApplication" target="com.ps.project.model.User">
+      <point x="8.900000000000091" y="-14.5" />
+      <point x="1240.3583333333336" y="666.0" />
+      <point x="1242.7606446331454" y="666.0" />
+      <point x="1242.7606446331454" y="268.0" />
+      <point x="1497.0317455114355" y="268.0" />
+      <point x="-14.4375" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.repository.PostRepository">
+      <point x="-54.769230769230944" y="-14.5" />
+      <point x="3636.7641025641024" y="566.0" />
+      <point x="3285.1606842116234" y="566.0" />
+      <point x="37.25" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.CommentController" target="com.ps.project.vo.request.CommentRequest">
+      <point x="68.40000000000009" y="-14.5" />
+      <point x="3227.219047619048" y="786.0" />
+      <point x="3434.6055925498135" y="786.0" />
+      <point x="-37.25" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.PostServiceImpl" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="-39.0" y="-14.5" />
+      <point x="2701.2833333333338" y="656.0" />
+      <point x="2568.102690087691" y="656.0" />
+      <point x="17.454545454545496" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.model.User">
+      <point x="-27.384615384615245" y="-14.5" />
+      <point x="3664.1487179487185" y="546.0" />
+      <point x="3556.8555925498135" y="546.0" />
+      <point x="3556.8555925498135" y="188.0" />
+      <point x="1541.948412178102" y="188.0" />
+      <point x="30.479166666666742" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.CommentController" target="com.ps.project.model.Post">
+      <point x="34.19999999999982" y="-14.5" />
+      <point x="3193.0190476190473" y="776.0" />
+      <point x="3386.8555925498135" y="776.0" />
+      <point x="3386.8555925498135" y="99.0" />
+      <point x="3363.975495511436" y="99.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.model.Admin" target="com.ps.project.model.User">
+      <point x="21.0" y="-14.5" />
+      <point x="1200.2606446331454" y="248.0" />
+      <point x="1490.6150788447685" y="248.0" />
+      <point x="-20.854166666666742" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.AdminController" target="com.ps.project.vo.response.MessageResponse">
+      <point x="58.5" y="-14.5" />
+      <point x="2974.7833333333338" y="756.0" />
+      <point x="3053.1249699259097" y="756.0" />
+      <point x="-22.28571428571422" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.UserController" target="com.ps.project.vo.UserDetailsDTO">
+      <point x="-40.63636363636374" y="-14.5" />
+      <point x="852.3219696969695" y="646.0" />
+      <point x="725.9583333333333" y="646.0" />
+      <point x="725.9583333333333" y="178.0" />
+      <point x="910.55860087829" y="178.0" />
+      <point x="-37.25" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.model.Comment" target="com.ps.project.model.User">
+      <point x="-24.75" y="-14.5" />
+      <point x="3720.1055925498135" y="178.0" />
+      <point x="1545.1567455114355" y="178.0" />
+      <point x="33.6875" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.model.User" target="com.ps.project.model.Profile">
+      <point x="8.020833333333258" y="14.5" />
+      <point x="1519.4900788447685" y="258.0" />
+      <point x="1582.7583333333334" y="258.0" />
+      <point x="39.59999999999991" y="-14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.UserController" target="com.ps.project.model.User">
+      <point x="40.63636363636374" y="-14.5" />
+      <point x="933.594696969697" y="666.0" />
+      <point x="1098.9583333333333" y="666.0" />
+      <point x="1098.9583333333333" y="238.0" />
+      <point x="1487.4067455114355" y="238.0" />
+      <point x="-24.0625" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.PostController" target="com.ps.project.vo.request.PostCreateRequest">
+      <point x="67.05000000000018" y="-14.5" />
+      <point x="4254.958333333334" y="786.0" />
+      <point x="4548.105592549814" y="786.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.UserController" target="com.ps.project.vo.request.LoginRequest">
+      <point x="-13.545454545454504" y="-14.5" />
+      <point x="879.4128787878788" y="626.0" />
+      <point x="814.9583333333333" y="626.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.ProjectApplication" target="com.ps.project.vo.UserDetailsDTO">
+      <point x="-62.299999999999955" y="-14.5" />
+      <point x="1169.1583333333335" y="656.0" />
+      <point x="1126.7606446331454" y="656.0" />
+      <point x="1126.7606446331454" y="178.0" />
+      <point x="985.05860087829" y="178.0" />
+      <point x="37.25" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.vo.response.FollowNumbersDataResponse" target="com.ps.project.model.User">
+      <point x="0.0" y="-14.5" />
+      <point x="1926.2833333333335" y="238.0" />
+      <point x="1525.9067455114355" y="238.0" />
+      <point x="14.4375" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.repository.ProfileRepository" target="com.ps.project.model.Profile">
+      <point x="42.75" y="-14.5" />
+      <point x="1436.8356446331454" y="407.0" />
+      <point x="1532.1583333333335" y="407.0" />
+      <point x="-11.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.AdminServiceImpl" target="com.ps.project.repository.AdminRepository">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.PostController" target="com.ps.project.model.User">
+      <point x="-22.350000000000364" y="-14.5" />
+      <point x="4165.558333333333" y="496.0" />
+      <point x="4137.105592549814" y="496.0" />
+      <point x="4137.105592549814" y="168.0" />
+      <point x="1548.3650788447685" y="168.0" />
+      <point x="36.89583333333326" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.ProfileController" target="com.ps.project.vo.response.FollowNumbersDataResponse">
+      <point x="-10.6875" y="-14.5" />
+      <point x="2006.3458333333335" y="566.0" />
+      <point x="1983.2833333333335" y="566.0" />
+      <point x="57.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.UserController" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="54.18181818181813" y="-14.5" />
+      <point x="947.1401515151515" y="686.0" />
+      <point x="2480.8299628149634" y="686.0" />
+      <point x="-69.81818181818198" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.model.Post">
+      <point x="54.769230769230944" y="-14.5" />
+      <point x="3746.3025641025642" y="766.0" />
+      <point x="3936.8555925498135" y="766.0" />
+      <point x="3936.8555925498135" y="69.0" />
+      <point x="3384.975495511436" y="69.0" />
+      <point x="21.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.ProfileController" target="com.ps.project.model.Profile">
+      <point x="-74.8125" y="-14.5" />
+      <point x="1942.2208333333335" y="596.0" />
+      <point x="1639.7833333333335" y="596.0" />
+      <point x="1639.7833333333335" y="407.0" />
+      <point x="1576.1583333333335" y="407.0" />
+      <point x="33.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.UserController" target="com.ps.project.vo.response.MessageResponse">
+      <point x="67.72727272727275" y="-14.5" />
+      <point x="960.685606060606" y="736.0" />
+      <point x="3008.5535413544812" y="736.0" />
+      <point x="-66.85714285714266" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.ProfileServiceImpl" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="66.75" y="-14.5" />
+      <point x="1508.8356446331454" y="696.0" />
+      <point x="2498.284508269509" y="696.0" />
+      <point x="-52.36363636363649" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.repository.ProfileRepository" target="com.ps.project.model.User">
+      <point x="-42.75" y="-14.5" />
+      <point x="1351.3356446331454" y="288.0" />
+      <point x="1503.448412178102" y="288.0" />
+      <point x="-8.020833333333258" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.ProjectApplication" target="com.ps.project.model.Profile">
+      <point x="26.700000000000045" y="-14.5" />
+      <point x="1258.1583333333335" y="666.0" />
+      <point x="1253.7606446331454" y="666.0" />
+      <point x="1253.7606446331454" y="387.0" />
+      <point x="1510.1583333333335" y="387.0" />
+      <point x="-33.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.utils.exporter.FileExporter">
+      <point x="68.46153846153857" y="-14.5" />
+      <point x="3759.994871794872" y="776.0" />
+      <point x="3960.105592549814" y="776.0" />
+      <point x="3960.105592549814" y="417.0" />
+      <point x="3981.1055925498135" y="417.0" />
+      <point x="-33.75" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.SecurityServiceImpl" target="com.ps.project.vo.response.JwtResponse">
+      <point x="46.25" y="-14.5" />
+      <point x="433.75" y="786.0" />
+      <point x="446.08333333333326" y="786.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.vo.request.CommentRequest">
+      <point x="-41.07692307692287" y="-14.5" />
+      <point x="3650.456410256411" y="556.0" />
+      <point x="3509.1055925498135" y="556.0" />
+      <point x="37.25" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.repository.CommentRepository" target="com.ps.project.model.Post">
+      <point x="42.75" y="-14.5" />
+      <point x="3883.6055925498135" y="79.0" />
+      <point x="3377.975495511436" y="79.0" />
+      <point x="14.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.web.jwt.JwtFilter" target="com.ps.project.model.User">
+      <point x="-28.25" y="-14.5" />
+      <point x="190.25" y="786.0" />
+      <point x="197.25" y="786.0" />
+      <point x="197.25" y="198.0" />
+      <point x="1474.573412178102" y="198.0" />
+      <point x="-36.89583333333326" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.utils.exporter.XMLFileExporter" target="com.ps.project.utils.exporter.FileExporter">
+      <point x="-4.547473508864641E-13" y="-14.5" />
+      <point x="33.75" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.PostServiceImpl" target="com.ps.project.model.User">
+      <point x="13.0" y="-14.5" />
+      <point x="2753.2833333333338" y="726.0" />
+      <point x="2745.7833333333338" y="726.0" />
+      <point x="2745.7833333333338" y="208.0" />
+      <point x="1535.5317455114355" y="208.0" />
+      <point x="24.0625" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.ProfileServiceImpl" target="com.ps.project.repository.ProfileRepository">
+      <point x="-22.25" y="-14.5" />
+      <point x="1419.8356446331454" y="646.0" />
+      <point x="1394.0856446331454" y="646.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.UserController" target="com.ps.project.vo.request.SignupRequest">
+      <point x="-54.181818181818244" y="-14.5" />
+      <point x="838.776515151515" y="656.0" />
+      <point x="696.5833333333333" y="656.0" />
+      <point x="696.5833333333333" y="99.0" />
+      <point x="723.6428196282886" y="99.0" />
+      <point x="-35.5" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="-68.46153846153857" y="-14.5" />
+      <point x="3623.0717948717947" y="576.0" />
+      <point x="2620.4663264513274" y="576.0" />
+      <point x="69.81818181818198" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.WebSecurityConfig" target="com.ps.project.web.jwt.JwtEntryPoint">
+      <point x="-42.75" y="-14.5" />
+      <point x="105.72833642052638" y="860.0" />
+      <point x="71.0" y="860.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.ProjectApplication" target="com.ps.project.repository.ProfileRepository">
+      <point x="62.299999999999955" y="-14.5" />
+      <point x="1293.7583333333334" y="646.0" />
+      <point x="1337.0856446331454" y="646.0" />
+      <point x="-57.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.vo.response.ProfileDataResponse" target="com.ps.project.model.Profile">
+      <point x="46.25" y="-14.5" />
+      <point x="1042.2083333333333" y="377.0" />
+      <point x="1499.1583333333335" y="377.0" />
+      <point x="-44.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.PostServiceImpl" target="com.ps.project.repository.PostRepository">
+      <point x="65.0" y="-14.5" />
+      <point x="2805.2833333333338" y="766.0" />
+      <point x="3210.6606842116234" y="766.0" />
+      <point x="-37.25" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.UserServiceImpl" target="com.ps.project.model.User">
+      <point x="13.0" y="-14.5" />
+      <point x="1662.8094862949556" y="606.0" />
+      <point x="1628.7833333333335" y="606.0" />
+      <point x="1628.7833333333335" y="248.0" />
+      <point x="1522.698412178102" y="248.0" />
+      <point x="11.229166666666742" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.PostController" target="com.ps.project.vo.response.PostResponse">
+      <point x="22.350000000000364" y="-14.5" />
+      <point x="4210.258333333334" y="756.0" />
+      <point x="4259.855592549814" y="756.0" />
+      <point x="33.75" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.ProjectApplication" target="com.ps.project.repository.UserRepository">
+      <point x="80.09999999999991" y="-14.5" />
+      <point x="1311.5583333333334" y="656.0" />
+      <point x="2277.9083333333338" y="656.0" />
+      <point x="-55.875" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.CommentServiceImpl" target="com.ps.project.model.Comment">
+      <point x="27.384615384615245" y="-14.5" />
+      <point x="3718.917948717949" y="746.0" />
+      <point x="3744.8555925498135" y="746.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.CommentController" target="com.ps.project.vo.response.MessageResponse">
+      <point x="0.0" y="-14.5" />
+      <point x="3158.8190476190475" y="596.0" />
+      <point x="3097.696398497338" y="596.0" />
+      <point x="22.28571428571422" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.SecurityServiceImpl" target="com.ps.project.web.jwt.JwtProvider">
+      <point x="-77.08333333333326" y="-14.5" />
+      <point x="310.41666666666674" y="786.0" />
+      <point x="303.75" y="786.0" />
+      <point x="32.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.AdminController" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="-58.5" y="-14.5" />
+      <point x="2857.7833333333338" y="646.0" />
+      <point x="2585.5572355422364" y="646.0" />
+      <point x="34.90909090909099" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.model.Post" target="com.ps.project.model.User">
+      <point x="-21.0" y="14.5" />
+      <point x="3342.975495511436" y="79.0" />
+      <point x="1540.3442455114355" y="79.0" />
+      <point x="28.875" y="-14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.PostServiceImpl" target="com.ps.project.model.Post">
+      <point x="39.0" y="-14.5" />
+      <point x="2779.2833333333338" y="726.0" />
+      <point x="2769.9032362949556" y="726.0" />
+      <point x="2769.9032362949556" y="89.0" />
+      <point x="3349.975495511436" y="89.0" />
+      <point x="-14.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.SecurityServiceImpl" target="com.ps.project.model.User">
+      <point x="-15.416666666666515" y="-14.5" />
+      <point x="371.58333333333326" y="208.0" />
+      <point x="1477.7817455114355" y="208.0" />
+      <point x="-33.6875" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.ProfileController" target="com.ps.project.vo.response.MessageResponse">
+      <point x="74.8125" y="-14.5" />
+      <point x="2091.8458333333338" y="746.0" />
+      <point x="3030.839255640195" y="746.0" />
+      <point x="-44.57142857142844" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.SecurityServiceImpl" target="com.ps.project.vo.UserDetailsDTO">
+      <point x="-46.25" y="-14.5" />
+      <point x="341.25" y="786.0" />
+      <point x="349.6666666666665" y="786.0" />
+      <point x="349.6666666666665" y="168.0" />
+      <point x="885.7252675449568" y="168.0" />
+      <point x="-62.08333333333326" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.ProfileController" target="com.ps.project.model.User">
+      <point x="10.6875" y="-14.5" />
+      <point x="2027.7208333333335" y="636.0" />
+      <point x="2050.7833333333338" y="636.0" />
+      <point x="2050.7833333333338" y="228.0" />
+      <point x="1529.1150788447685" y="228.0" />
+      <point x="17.645833333333258" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.repository.AdminRepository" target="com.ps.project.model.Admin">
+      <point x="0.0" y="-14.5" />
+      <point x="608.0833333333333" y="367.0" />
+      <point x="1151.2606446331454" y="367.0" />
+      <point x="-28.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.controller.ProfileController" target="com.ps.project.vo.request.FollowRequest">
+      <point x="-53.4375" y="-14.5" />
+      <point x="1963.5958333333335" y="586.0" />
+      <point x="1721.2833333333335" y="586.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.ps.project.service.implementation.UserServiceImpl" target="com.ps.project.exceptions.ApiExceptionResponse">
+      <point x="65.0" y="-14.5" />
+      <point x="1714.8094862949556" y="706.0" />
+      <point x="2515.7390537240544" y="706.0" />
+      <point x="-34.90909090909099" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5999999999999998" x="1288.0000000000007" y="366.00000000000034" />
+  <SelectedNodes>
+    <node>com.ps.project.web.jwt.JwtProvider</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

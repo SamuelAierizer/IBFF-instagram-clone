@@ -1,0 +1,144 @@
+<div class="container">
+    <app-navigation></app-navigation>
+</div>
+
+<main role="main" class="pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-3 p-5">
+                <img src="./assets/images/default-starter.png" class="rounded-circle w-100" alt>
+            </div>
+            <div class="col-9 pt-5">
+                <div class="d-flex justify-content-between align-items-baseline">
+                    <div class="d-flex align-items-center pb-3">
+                        <h1 class="h-4">{{ profileUsername }}</h1>
+
+                        <!--    Should only be there if not following already, else should be unfollow    -->
+                        <div *ngIf="currentUser && !canUpdate()">
+                            <div [hidden]="isFollowing()">
+                                <a class="btn btn-success ml-5" (click)="follow()">Follow</a>
+                            </div>
+                            <div [hidden]="!isFollowing()">
+                                <a class="btn btn-danger ml-5" (click)="unfollow()">Unfollow</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div [hidden]="!canUpdate()">
+                        <button class='btn btn-dark mr-3' data-toggle="modal" data-target="#postModal">Add new
+                            post</button>
+                    </div>
+                </div>
+
+                <div [hidden]="!canUpdate()">
+                    <button class='btn btn-info mr-3 mb-3' data-toggle="modal" data-target="#editModal">Edit profile</button>
+                </div>
+
+                <div class="d-flex">
+                    <div class="pr-5"><strong>{{postCount}}</strong> posts</div>
+                    <div class="pr-5"><strong>{{followersCount}}</strong> followers</div>
+                    <div class="pr-5"><strong>{{followingCount}}</strong> following</div>
+                </div>
+                <div *ngIf="profile">
+                    <div class="pt-4 font-weight-bold">{{profile.title}}</div>
+                    <div>{{profile.description}}</div>
+                    <div><a href="">{{profile.url}}</a></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row pt-5 justify-content-center" *ngFor="let curentPost of posts">
+            <div class="col-6 pb-4">
+                <app-post [post]="curentPost"></app-post>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<div class="modal" id="editModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form [formGroup]="profileUpdateForm" #updprofile (ngSubmit)="update(updprofile)">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" style="text-align: center">Update Profile</h4>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body" *ngIf=profile>
+                    <div [hidden]="wasUpdated()">
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" formControlName="profile_title"
+                                [(ngModel)]="profile.title">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" formControlName="profile_description"
+                                [(ngModel)]="profile.description">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Url</label>
+                            <input type="text" class="form-control" formControlName="profile_url"
+                                [(ngModel)]="profile.url">
+                        </div>
+                    </div>
+                    <div [hidden]="!wasUpdated()">
+                        <h4>User Detail Updated!</h4>
+                    </div>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" [hidden]="wasUpdated()">Update</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"
+                        (click)="changeisUpdated()">Close</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="postModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form #newpost (ngSubmit)="sendPost()" novalidate>
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" style="text-align: center">Add new Post</h4>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div>
+                        <div class="form-group">
+                            <label for="caption">Caption</label>
+                            <input type="text" name="postCaption" class="form-control" [(ngModel)]="postCaption"
+                                required minlength="3">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Image">Image</label><br>
+                            <input type="file" class="" name="image" (change)="onFileChanged($event)" accept=".jpg">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Upload</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"
+                        (click)="changeisUpdated()">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

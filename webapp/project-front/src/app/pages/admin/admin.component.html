@@ -1,0 +1,102 @@
+<div class="container">
+	<app-navigation></app-navigation>
+</div>
+
+<div class="container pt-5">
+    <div class="panel panel-default pt-5">
+        <div class="panel-heading">
+            <h1 style="text-align: center">Users - Logged In: {{loggedInUserCount}}</h1><br>
+            <div class="row" [hidden]="!deleteMessage">
+
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4">
+                    <div class="alert alert-info alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong>User Data Deleted</strong>
+                    </div>
+                </div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+
+
+        <div class="panel-body">
+            <table class="table table-hover table-sm" datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.username}}</td>
+                        <td>
+                            <button (click)="deleteUser(user.id)" class='btn btn-primary mr-3'[hidden]="isAdmin(user)"><i
+                                    class="fa fa-futboll-0" >Delete</i></button>
+                            <button (click)="updateUser(user.id)" class='btn btn-info' data-toggle="modal"
+                                data-target="#myModal">Edit</button>
+                        </td>
+                    </tr>
+                </tbody><br>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form [formGroup]="userUpdateForm" #updsusr (ngSubmit)="update(updsusr)">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" style="text-align: center">Update User</h4>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body" *ngIf="modalUser">
+                    <div [hidden]="isUpdated">
+                        <h1>Hello</h1>
+                        <div class="form-group" >
+                            <label for="name">Name</label>
+                            <input value="{{user.name}}" type="text" class="form-control" formControlName="user_name" 
+                            [(ngModel)]="modalUser.name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Email</label>
+                            <input type="text" class="form-control" formControlName="user_email"
+                                [(ngModel)]="modalUser.email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Username</label>
+                            <input type="text" class="form-control" formControlName="user_username"
+                                [(ngModel)]="modalUser.username">
+                        </div>
+                    </div>
+                    <div [hidden]="!isUpdated">
+                        <h4>User Detail Updated!</h4>
+                    </div>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" [hidden]="isUpdated">Update</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"
+                        (click)="changeisUpdated()">Close</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

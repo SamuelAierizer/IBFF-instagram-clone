@@ -1,0 +1,67 @@
+<div class="card">
+    <div *ngIf="post.imageData">
+        <img class="card-img-top" [src]="'data:image/jpg;base64,' + post.imageData" alt="Card image cap"
+            data-toggle="modal" data-target="#thisPostModal">
+    </div>
+    <div class="m-3">
+        <div class="card-block pb-3">
+            <h4 class="card-title">Post of: {{post.name}}</h4>
+            <p class="card-text">{{post.caption}}</p>
+        </div>
+        <div *ngIf="currentUser.role == Role.Admin">
+            <button class="btn" (click)="export()">Export comment data</button>
+        </div>
+    </div>
+    <div [hidden]="isSameUser(post.username)">
+        <div class="row m-3">
+            <div class="col-sm-3">
+                <div [hidden]="isLiked()">
+                    <button class="btn btn-success" (click)="like()">Like</button>
+                </div>
+                <div [hidden]="!isLiked()">
+                    <button class="btn btn-danger" (click)="dislike()">Dislike</button>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-info" (click)="share()">Share</button>
+            </div>
+            <div class="col-sm-3">
+                <button class="btn btn-secondary" (click)="toggleComments()">Comments</button>
+            </div>
+            <div class="col-sm-3 text-md-right">
+                <button class="btn text-info"><b>likes: {{likeCount}}</b></button>
+            </div>
+        </div>
+    </div>
+    <div [hidden]="!isSameUser(post.username)">
+        <div class="row m-3">
+            <div class="col-sm-6">
+                <button class="btn btn-secondary" (click)="toggleComments()">Comments</button>
+            </div>
+            <div class="col-sm-6 text-md-right">
+                <button class="btn text-info"><b>likes: {{likeCount}}</b></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-3" *ngIf="viewComments">
+        <div class="post-comment">
+            <form [formGroup]="commentForm" (ngSubmit)="postComment()">
+                <div class="form-group">
+                    <textarea class="form-control" [formControlName]="'text'" placeholder="Your Thoughts?"></textarea>
+                </div>
+                <button type="submit" class="btn float-right">Comment</button>
+            </form>
+        </div>
+        <div class="mt-5 pt-2">
+            <div class="pt-1" *ngFor="let comment of comments">
+                <div class="comment">
+                    <div class="username">
+                        <a routerLink="/profile/{{comment.username}}">{{comment.username}}</a>
+                    </div>
+                    <b>{{comment.text}}</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
